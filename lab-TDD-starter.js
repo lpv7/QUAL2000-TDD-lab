@@ -15,21 +15,21 @@ node --test
 const add = (a, b) => {
   //ex: add(3,5) should return 5
   //write your code here
-  return; //return the result
+  return a + b; //return the result
 };
 
 //subtract function
 const subtract = (a, b) => {
   //ex: subtract(5,9) should return -4
   //write your code here
-  return; //return the result
+  return a - b; //return the result
 };
 
 //multiply function
 const multiply = (a, b) => {
   //ex: multiply (12, 9) should return 108
   //write your code here
-  return; //return the result
+  return a * b; //return the result
 };
 
 //divide function
@@ -37,14 +37,20 @@ const divide = (a, b) => {
   //ex: divide(55, 5) should return 11
   //Make sure to test for zero division should throw and error
   //write your code here
-  return; //return the result
+  if (b === 0) {
+    throw new Error("Cannot divide by zero");
+  }
+  return a / b; //return the result
 };
 
 //modulas function
 const modulas = (a, b) => {
   //ex: modulas(17,4) should return 1
   //write your code here
-  return; //return the result
+  if (b === 0) {
+    throw new Error("Cannot divide/mod by zero");
+  }
+  return a % b; //return the result
 };
 
 //power function
