@@ -74,4 +74,61 @@ describe("Lab-TDD tests", () => {
       assert.throws(() => modulas(10, 0), Error);
     });
   });
+  //Power
+  describe("Power Function Tests", () => {
+    test("Power function should return 32 when performing 2^5", () => {
+      assert.strictEqual(power(2, 5), 32);
+    });
+    test("Power function should return 0 when performing 0^5", () => {
+      assert.strictEqual(power(0, 5), 0);
+    });
+    test("Power function should return 1 when performing 32^0", () => {
+      assert.strictEqual(power(32, 0), 1);
+    });
+    test("Power function should return 0.25 when performing 2^-2", () => {
+      assert.strictEqual(power(2, -2), 0.25);
+    });
+  });
+  //Square Root
+  describe("Square Root Function Tests", () => {
+    test("Square function should return 5 when performing sqrt25", () => {
+      assert.strictEqual(squareRoot(25), 5);
+    });
+    test("Square Root function should return 0 when performing sqrt0", () => {
+      assert.strictEqual(squareRoot(0), 0);
+    });
+    test("sqrt of a negative number like -1 should throw an error", () => {
+      assert.throws(() => squareRoot(-1), Error);
+    });
+  });
+  //Floor
+  describe("Floor Function Tests", () => {
+    test("Floor function should return 5 when performing floor(5.95)", () => {
+      assert.strictEqual(floor(5.95), 5);
+    });
+    test("Floor function should return 5 when performing floor(5.05)", () => {
+      assert.strictEqual(floor(5.05), 5);
+    });
+    test("Floor function should return 5 when performing floor(5)", () => {
+      assert.strictEqual(floor(5), 5);
+    });
+    test("Floor function should return -6 when performing floor(-5.05)", () => {
+      assert.strictEqual(floor(-5.05), -6);
+    });
+  });
+  //Ceiling
+  describe("Ceiling Function Tests", () => {
+    test("Ceiling function should return 6 when performing ceiling(5.95)", () => {
+      assert.strictEqual(ceiling(5.95), 6);
+    });
+    test("Ceiling function should return 6 when performing ceiling(5.05)", () => {
+      assert.strictEqual(ceiling(5.05), 6);
+    });
+    test("Ceiling function should return 5 when performing ceiling(5)", () => {
+      assert.strictEqual(ceiling(5), 5);
+    });
+    test("Ceiling function should return -5 when performing floor(-5.05)", () => {
+      assert.strictEqual(ceiling(-5.05), -5);
+    });
+  });
 });

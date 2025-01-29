@@ -57,7 +57,7 @@ const modulas = (a, b) => {
 const power = (a, b) => {
   //ex: power(2, 5) should return 32
   //write your code here
-  return; //return the result
+  return a ** b; //return the result
 };
 
 //square function
@@ -65,21 +65,26 @@ const squareRoot = (a) => {
   //Make sure that squareRoot a negative number should throw an error
   //ex: squareRoot(25) should return 5
   //write your code here
-  return; //return the result
+  if (a < 0) {
+    throw new Error(
+      "No complexity here! Cannot take the square root of a negative number"
+    );
+  }
+  return Math.sqrt(a); //return the result
 };
 
 //floor function
 const floor = (a) => {
   //ex: floor(15.3) should return 15
   //write your code here
-  return; //return the result
+  return Math.floor(a); //return the result
 };
 
 //ceiling function
 const ceiling = (a) => {
   //ex: ceiling(15.3) should return 16
   //write your code here
-  return; //return the result
+  return Math.ceil(a); //return the result
 };
 
 ////////////////////////////////////////
